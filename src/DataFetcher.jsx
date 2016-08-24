@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {browserHistory} from 'react-router';
 import _ from 'lodash';
 
+import {stars} from './stores.jsx';
+
 import ChampionList from './ChampionList.jsx';
 
 function fetchJSON(url) {
@@ -19,9 +21,20 @@ export default class DataFetcher extends React.Component {
   constructor(props){
     super(props);
     this.state={
-      champions: []
+      champions: [],
+      starredChampions: []
     };
-    this.getData()
+    this.getData();
+    this.fetchStars();
+  }
+
+  fetchStars(){
+    stars.watch().subscribe((stars)=>{
+      console.log(stars)
+      this.setState({
+        starredChampions:stars
+      })
+    })
   }
 
   getData(){
@@ -33,7 +46,7 @@ export default class DataFetcher extends React.Component {
   render() {
     return (
       <div>
-      <ChampionList champions={this.state.champions} />
+      <ChampionList champions={this.state.champions} starredChampions={this.state.starredChampions} />
       </div>
     )
   }

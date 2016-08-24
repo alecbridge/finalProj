@@ -136,50 +136,78 @@ html, body , #root {
 .listBack {
   background-color: #011317;
   min-height:100%;
+  text-align: center;
 }
+
 
 .champListHolder {
   box-sizing: border-box;
   display: inline-block;
-  margin: 0 auto;
-  background-color: burlywood;
-  width: 100%;
+  text-align: center;
+  background-color: whitesmoke;
+  width: 90%;
   min-height:100%;
-  border: 1px solid red;
-  overflow: auto; 
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
 }
 
 .listChamp {
   display: inline-block;
-  text-align: center;
-  background-color: lightblue;
-  width: 350px;
-  height:300px;
-  border: 1px solid blue;
-  margin: 10px;
+  text-align: left;
+  background-color: lightgrey;
+  width:350px;
+  height:240px;
+  border: 1px solid darkgrey;
+  border-radius: 5px;
+  margin: 7px;
+  margin-top:10px;
+  margin-bottom:10px;
+  overflow:hidden;
+  opacity: .85;
 }
 
-/* name will be block of container */
+.listChamp:hover {
+  opacity: 1;
+  box-shadow: 1px 2px 18px 3px rgba(79,79,79,0.85);
+}
+
+.starPinUnchecked , .starPinChecked{
+  float:right;
+  font-size:26px;
+  margin-right: 8px;
+  margin-top: 2px;
+
+}
+
+.starPinChecked{
+  color:gold;
+}
+
+.disableChamp {
+  position: absolute;
+  float: right; 
+  bottom: 0px; 
+  right: 0px;
+}
+
 .champListName {
+  position: relative;
+  top: 200px;
   font-size:28px;
   color:#dbf8fa;
   text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  background-color: green;
   padding-left:10px;
 }
 
-/*image will be inline*/
 .champListImg {
+  margin-top: -32px;
   background-color:orange;
-  width:300px;
-  max-height:200px;
+  max-width:50%;
+  max-height:60%;
 }
 
-
 /*Champion Styling*/
-
-
-
 
 
 /*NoMatch Styling*/

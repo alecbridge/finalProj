@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+
 import globalStyles from '../assets/styles/global.css';
+import FontAwesome from '../assets/styles/font-awesome.css';
 
 import Welcome from './Welcome.jsx';
 import About from './About.jsx';
