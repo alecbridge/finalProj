@@ -5,7 +5,7 @@ export default class Welcome extends React.Component {
 
   onEnterClick(e) {
     e.preventDefault()
-    browserHistory.push('/championlist/')
+    browserHistory.push('/champions/')
   }
 
   render() {

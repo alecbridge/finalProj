@@ -9,9 +9,6 @@ export default class Star extends React.Component {
     if (this.props.checked){
       var starStyle = {
         color:'#FFC90A',
-        border:'1px solid #333',
-        borderRadius:'25px',
-        backgroundColor: '#333',
       }  
     }
     else {
@@ -24,8 +21,6 @@ export default class Star extends React.Component {
     )
   }
 }
-
-//<FontAwesome name="star" />
 
 export default class ChampionList extends React.Component {
   constructor(props){
@@ -50,16 +45,13 @@ export default class ChampionList extends React.Component {
         key:key
       })
     }
-    console.log(key, e)  //When clicking star, console logs the name the star belongs to
+      //console.log(key, e) When clicking star, console logs the name the star belongs to
   }
 
-
-/*  handleChampClick(e){
-    e.preventDefault()
-    browserHistory.push('/champion/'+this.champion.name)
-  }
-*/  
-
+   handleChampClick(key, e){
+     browserHistory.push('/champions/'+ key)
+   }
+  
   render() {
     return (
       <div className="listBack">
@@ -72,7 +64,7 @@ export default class ChampionList extends React.Component {
               champion.checked=false
             }
             return (
-              <div className="listChamp" key={champion.id} title={champion.title} /*onClick={this.handleChampClick.bind(this)}*/>
+              <div className="listChamp" key={champion.id} title={champion.title} onClick={this.handleChampClick.bind(this, champion.key)} >
                 <div>
                   <div className="starPinUnchecked"><Star safe={champion.key} checked={champion.checked} onToggle={this.handleStarClick.bind(this)} style={{color:this.state.color}} /></div>
                   <div className="champListName">{champion.name}</div> 

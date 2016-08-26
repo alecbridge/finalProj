@@ -2,9 +2,7 @@ import React, {Component} from 'react';
 import {browserHistory} from 'react-router';
 import _ from 'lodash';
 
-import {stars} from './stores.jsx';
-
-import ChampionList from './ChampionList.jsx';
+import Champion from './Champion.jsx';
 
 function fetchJSON(url) {
   return fetch(url).then(function(response) {
@@ -17,36 +15,23 @@ function fetchJSON(url) {
   });
 }
 
-export default class DataFetcher extends React.Component {
+export default class ChampionPage extends React.Component {
   constructor(props){
     super(props);
     this.state={
       champions: [],
-      starredChampions: []
     };
     this.getData();
-    this.fetchStars();
   }
-
-  fetchStars(){
-    stars.watch().subscribe((stars)=>{
-      console.log(stars)
-      this.setState({
-        starredChampions:stars
-      })
-    })
-  }
-
   getData(){
-    fetchJSON('http://localhost:3001/champions/').then((json) => {
+    fetchJSON('http://localhost:3001/champions/:championName').then((json) => {
       this.setState({champions:_.values(json.data)})
     })
   }
-
   render() {
     return (
       <div>
-      <ChampionList champions={this.state.champions} starredChampions={this.state.starredChampions} />
+        <Champion champion={this.state.champion} />
       </div>
     )
   }

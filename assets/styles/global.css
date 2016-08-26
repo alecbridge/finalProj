@@ -155,11 +155,12 @@ html, body , #root {
 .listChamp {
   display: inline-block;
   text-align: left;
-  background-color: lightgrey;
+  /*background-color: lightgrey;*/
+  background-color: #5E5E5E;
   width:350px;
   height:240px;
-  border: 1px solid darkgrey;
-  border-radius: 5px;
+  border: 1px solid #333;
+  border-radius: 8px;
   margin: 7px;
   margin-top:10px;
   margin-bottom:10px;
@@ -177,6 +178,7 @@ html, body , #root {
   font-size:26px;
   margin-right: 8px;
   margin-top: 2px;
+  cursor:pointer;
 
 }
 

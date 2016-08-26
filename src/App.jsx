@@ -7,7 +7,7 @@ import FontAwesome from '../assets/styles/font-awesome.css';
 import Welcome from './Welcome.jsx';
 import About from './About.jsx';
 import DataFetcher from './DataFetcher.jsx';
-import Champion from './Champion.jsx';
+import ChampionPage from './ChampionPage.jsx';
 import ChampionList from './ChampionList.jsx';
 import NoMatch from './NoMatch.jsx';
 
@@ -17,8 +17,10 @@ ReactDOM.render(
   <Router history={browserHistory}>
     <Route path="/" component={Welcome} />
     <Route path="/About" component={About} />
-    <Route path="/championlist/" component={DataFetcher} />
-    <Route path="/champion/" /*"+ champID"*/ component={Champion} />
+    <Route path="/champions/" component={DataFetcher} >
+      
+    </Route>  
+    <Route path="/champions/:championName" component={ChampionPage} />
     <Route path="*" component={NoMatch} /> 
   </Router>,
   document.getElementById('root')
