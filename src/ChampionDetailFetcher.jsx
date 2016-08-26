@@ -15,17 +15,17 @@ function fetchJSON(url) {
   });
 }
 
-export default class ChampionPage extends React.Component {
+export default class ChampionDetailFetcher extends React.Component {
   constructor(props){
     super(props);
     this.state={
-      champions: [],
+      champion: {},
     };
     this.getData();
   }
   getData(){
-    fetchJSON('http://localhost:3001/champions/:championName').then((json) => {
-      this.setState({champions:_.values(json.data)})
+    fetchJSON('http://localhost:3001/champions/'+ this.props.params.championId).then((json) => {
+      this.setState({champion:json})
     })
   }
   render() {

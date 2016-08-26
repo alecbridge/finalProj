@@ -3,10 +3,9 @@ import {browserHistory} from 'react-router';
 
 export default class Champion extends React.Component {
   render() {
-    const { params } = this.props;
-    const { champion } = params;
+    console.log(this.props.champion)
     return (
-      <div>A single champion's page. {champion.name}</div>
+      <div>A single champion's page. {this.props.champion.name}</div>
     )
   }
 }

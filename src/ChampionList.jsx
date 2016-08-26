@@ -48,8 +48,8 @@ export default class ChampionList extends React.Component {
       //console.log(key, e) When clicking star, console logs the name the star belongs to
   }
 
-   handleChampClick(key, e){
-     browserHistory.push('/champions/'+ key)
+   handleChampClick(id, e){
+     browserHistory.push('/champions/'+ id)
    }
   
   render() {
@@ -64,11 +64,11 @@ export default class ChampionList extends React.Component {
               champion.checked=false
             }
             return (
-              <div className="listChamp" key={champion.id} title={champion.title} onClick={this.handleChampClick.bind(this, champion.key)} >
+              <div className="listChamp" key={champion.id} title={champion.title}  >
                 <div>
                   <div className="starPinUnchecked"><Star safe={champion.key} checked={champion.checked} onToggle={this.handleStarClick.bind(this)} style={{color:this.state.color}} /></div>
-                  <div className="champListName">{champion.name}</div> 
-                  <div className="champListImg"><img src={"http://ddragon.leagueoflegends.com/cdn/img/champion/loading/"+champion.key+"_0.jpg"} /></div>    
+                  <div className="champListName" onClick={this.handleChampClick.bind(this, champion.id)}>{champion.name}</div> 
+                  <div className="champListImg" onClick={this.handleChampClick.bind(this, champion.id)}><img src={"http://ddragon.leagueoflegends.com/cdn/img/champion/loading/"+champion.key+"_0.jpg"} /></div>    
                 </div>  
               </div>   
             )

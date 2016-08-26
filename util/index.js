@@ -14,9 +14,9 @@ app.use(function(req, res, next) {
   next();
 });
 
-  app.get('/champions/:championName', function (req, res){
+  app.get('/champions/:champId', function (req, res){
     var options = {champData: 'image,stats,passive,spells', version : '6.16.2', locale: 'en_US', dataById:true}
-    LolApi.Static.getChampionList(options,'na', function (err, champs) {
+    LolApi.Static.getChampionById(req.params.champId, options,'na', function (err, champs) {
       if (err) {
         throw err
       }
