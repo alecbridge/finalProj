@@ -179,7 +179,6 @@ html, body , #root {
   margin-right: 8px;
   margin-top: 2px;
   cursor:pointer;
-
 }
 
 .starPinChecked{
@@ -213,6 +212,105 @@ html, body , #root {
 }
 
 /*Champion Styling*/
+
+.champTop {
+  display: block;
+  height: 400px;
+  border-bottom: 4px solid black;
+}
+
+.topImageHolder{
+  display: block;
+  float: left;
+  min-width: 45%;
+  max-width: 45%;
+  min-height:85%;
+  background-color: burlywood;
+}
+
+.topImage {
+  display: block;
+  max-height: 20%;
+  max-width:200px;
+}
+
+.champHeader {
+  float:right;
+  width: 54%;
+  background-color: goldenrod;
+  text-align: left;
+}
+
+.champName {
+  font-size: 30px;
+}
+.champTitle {
+  font-size: 20px;
+}
+
+.topStats {
+  display: block;
+  clear: right;
+  float: right;
+  width:54%;
+  height: 70%;
+  background-color: lawngreen;
+}
+.statsTitle {
+  font-size: 28px;
+  border-bottom: 1px solid black;
+}
+.statsArea {
+  background-color: salmon;
+  height:82%;
+  margin: 10px;
+}
+
+.statsAreaTop {
+  display: inline-block;
+  height: 50%;
+}
+.statsAreaBot {
+  display: inline-block;
+  height:50%;
+}
+
+
+.champBot{
+  height:990px;
+  background-color: aqua;
+}
+
+.botTitle{
+  font-size: 32px;
+}
+
+.botSpell {
+  margin: 0 auto;
+  background-color: mediumorchid;
+  height: 18%;
+  width: 80%;
+  margin-bottom: 5px;
+  border: 2px solid black;
+  border-radius:6px;
+  padding-top: 10px;
+}
+
+.spellImage {
+  float: left;
+  margin-left:10px;
+}
+
+
+.spellName {
+  font-size: 24px;
+}
+
+.spellDesc {
+  height: 40%;
+  clear:both;
+}
+
 
 
 /*NoMatch Styling*/
