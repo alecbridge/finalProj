@@ -139,7 +139,6 @@ html, body , #root {
   text-align: center;
 }
 
-
 .champListHolder {
   box-sizing: border-box;
   display: inline-block;
@@ -212,105 +211,203 @@ html, body , #root {
 }
 
 /*Champion Styling*/
+.champHolder {
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+  background-color: #939393;
+  width: 90%;
+  min-height:100%;
+  margin-bottom: 20px;
+  margin-top: 0px;
+  border: 5px solid #076f9d;
+  border-image: linear-gradient(to bottom,#cdfafa,#076f9d) 1 stretch;
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
 
+
+.championBacker {
+  background-color: #011317;
+  min-height:100%;
+  text-align: center;
+  padding-top: 20px;
+}
 .champTop {
   display: block;
-  height: 400px;
-  border-bottom: 4px solid black;
+  height: 300px;
+  border-bottom: 4px solid #AFD4D8;
+  background-color: #939393;
 }
 
 .topImageHolder{
   display: block;
-  float: left;
-  min-width: 45%;
-  max-width: 45%;
-  min-height:85%;
+  margin: 0 auto;
+  min-width: 90%;
+  max-width: 90%;
+  min-height:100%;
   background-color: burlywood;
+  border: 5px solid #cdfafa;
+  /*border-image: linear-gradient(to bottom,#72c4b9,#2f5981) 1 stretch;*/
+  border-style: solid;
+  border-width: 6px 6px 3px 6px;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  overflow: hidden;
 }
 
 .topImage {
   display: block;
-  max-height: 20%;
-  max-width:200px;
+  position:relative;
+  max-height: 70%;
+  max-width:100%;
 }
 
 .champHeader {
-  float:right;
-  width: 54%;
-  background-color: goldenrod;
+  float:left;
   text-align: left;
+  position:absolute;
+  bottom: 15%;
+  left: 10%;
 }
 
 .champName {
-  font-size: 30px;
+  display:block;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 58px;
+  color: whitesmoke;
+  text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
+
 .champTitle {
+  font-family: 'Libre Baskerville', serif;
   font-size: 20px;
+  opacity: .8;
+  text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-.topStats {
-  display: block;
-  clear: right;
-  float: right;
-  width:54%;
-  height: 70%;
-  background-color: lawngreen;
-}
 .statsTitle {
-  font-size: 28px;
-  border-bottom: 1px solid black;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 32px;
+  padding-top: 5px;
+  margin-bottom: 10px;
+  color: whitesmoke;
+  text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
+.statsCategory {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 21px;
+}
+.offense {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 20px;
+  border-style: solid;
+  border-width:0px 0px 2px 0px;
+  border-color: black;
+
+}
+.defense{
+  font-family: 'Libre Baskerville', serif;
+  font-size: 20px;
+  font-family: 'Libre Baskerville', serif;
+  border-style: solid;
+  border-width:0px 0px 2px 0px;
+  border-color: black;
+}
+
+
 .statsArea {
-  background-color: salmon;
-  height:82%;
-  margin: 10px;
+  font-family: 'Open Sans', serif;
+  background-color: none;
+  height:65%;
+  width:75%;
+  margin: 0 auto;
+  background-color: #A1E0FC;
+  border: 2px solid black;
+    border-radius:5px;
+
+  box-shadow: 1px 2px 4px 3px rgba(79,79,79,0.85);
+
+}
+.statsAreaLeft {
+  display: block;
+  float: left;
+  width:50%;
+  height:100%;  
+  border-right: 2px solid black;
+  padding-bottom:30px;
 }
 
-.statsAreaTop {
-  display: inline-block;
-  height: 50%;
+.statsAreaRight {
+  display: block;
+  float: right;
+  width:50%;
+  height:100%;
+  border-left: 2px solid black;
 }
-.statsAreaBot {
-  display: inline-block;
-  height:50%;
-}
-
 
 .champBot{
-  height:990px;
-  background-color: aqua;
+  min-height: 70%;
+  max-height:90%;
+  /*height:990px;*/
+  background-color: #939393;
 }
 
 .botTitle{
+  font-family: 'Libre Baskerville', serif;
   font-size: 32px;
+  color: whitesmoke;
+  text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  padding-top:14px;
+  padding-bottom: 14px;
+  padding-left: 26px;
 }
 
 .botSpell {
   margin: 0 auto;
-  background-color: mediumorchid;
-  height: 18%;
+  background-color: #A1E0FC;
+  min-height: 8%;
+  max-height: 23%;
   width: 80%;
-  margin-bottom: 5px;
+  margin-bottom: 12px;
   border: 2px solid black;
-  border-radius:6px;
+  border-radius:5px;
   padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 1px 2px 4px 3px rgba(79,79,79,0.85);
+
 }
 
 .spellImage {
+  display: block;
+  max-height:68px;
+  background-color: yellow;
   float: left;
-  margin-left:10px;
+  margin-top:14px;
+  margin-left:14px;
+  margin-bottom:8px;
+  margin-right: 14px;
+  border:2px solid black;
 }
 
 
 .spellName {
+  font-family: 'Libre Baskerville', serif;
   font-size: 24px;
 }
 
 .spellDesc {
+  font-family: 'Open Sans', serif;
+  font-size:16px;
+  line-height:22px;
   height: 40%;
-  clear:both;
+  clear:right;
+  padding-bottom: 14px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left:10px;
 }
-
 
 
 /*NoMatch Styling*/

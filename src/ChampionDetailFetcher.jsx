@@ -18,9 +18,7 @@ function fetchJSON(url) {
 export default class ChampionDetailFetcher extends React.Component {
   constructor(props){
     super(props);
-    this.state={
-      champion: {},
-    };
+    this.state={}
     this.getData();
   }
   getData(){
@@ -31,7 +29,7 @@ export default class ChampionDetailFetcher extends React.Component {
   render() {
     return (
       <div>
-        <Champion champion={this.state.champion} />
+      {this.state.champion ? <Champion champion={this.state.champion} /> : null}
       </div>
     )
   }
