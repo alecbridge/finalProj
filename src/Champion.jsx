@@ -23,21 +23,27 @@ export default class Champion extends React.Component {
                 <div className="statsArea">
                   <div className="statsAreaLeft">
                     <div className="offense">Offense </div>
-                    <span>Attack Damage:</span>
-                    <div>{this.props.champion.stats.attackdamage}</div>
-                    <span>Attack Range:</span>
-                    <div>{this.props.champion.stats.attackrange}</div>
-                    <span>Movement Speed:</span>
-                    <div>{this.props.champion.stats.movespeed} </div>
+                    <div className="tableItems"><strong>Attack Damage:</strong>
+                      <div>{this.props.champion.stats.attackdamage}</div>
+                    </div>
+                    <div className="tableMiddle"><strong>Attack Range:</strong>
+                      <div>{this.props.champion.stats.attackrange}</div>
+                    </div>
+                    <div className="tableItems"><strong>Movement Speed:</strong>
+                      <div>{this.props.champion.stats.movespeed} </div>
+                    </div>
                   </div>
                   <div className="statsAreaRight">
                     <div className="defense"> Defense</div>
-                    <span>Health:</span>
-                    <div>{this.props.champion.stats.hp} </div>
-                    <span>Armor:</span>
-                    <div>{this.props.champion.stats.armor}</div>
-                    <span>Magic Resist:</span>
-                    <div>{this.props.champion.stats.spellblock}</div>
+                    <div className="tableItems"><strong>Health:</strong>
+                      <div>{this.props.champion.stats.hp} </div>
+                    </div>
+                    <div className="tableMiddle"><strong>Armor:</strong>
+                      <div>{this.props.champion.stats.armor}</div>
+                    </div>
+                    <div className="tableItems"><strong>Magic Resistance:</strong>
+                      <div>{this.props.champion.stats.spellblock}</div>
+                    </div>
                   </div>  
                 </div>   
           </div>
