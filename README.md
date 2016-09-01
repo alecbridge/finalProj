@@ -24,10 +24,10 @@ Took a 12 week long course to learn how to code, this if my final project for it
 ####Coming Updates/Fixes
 In no particular order:
 
-  *Alphabetize Champion List  
-  *Add in Search Functionality to List  
-  *Move starred items to top of List  
-  *Possible loading icon for champion list for slow loads  
-  *Color scheme/style change    
+  * Alphabetize Champion List  
+  * Add in Search Functionality to List  
+  * Move starred items to top of List  
+  * Possible loading icon for champion list for slow loads  
+  * Color scheme/style change    
 
 
