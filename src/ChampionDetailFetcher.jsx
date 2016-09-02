@@ -22,7 +22,7 @@ export default class ChampionDetailFetcher extends React.Component {
     this.getData();
   }
   getData(){
-    fetchJSON('http://localhost:3001/api/champions/'+ this.props.params.championId).then((json) => {
+    fetchJSON('/api/champions/'+ this.props.params.championId).then((json) => {
       this.setState({champion:json})
     })
   }
