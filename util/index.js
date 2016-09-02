@@ -10,10 +10,6 @@ var express = require('express');
 var app = express();
 app.use(express.static(path.resolve(__dirname + '/../public')));
 
-app.use(function(req, res) {
-  res.sendFile(path.resolve(__dirname + '/../public/index.html'));
-});
-
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -26,10 +22,8 @@ app.use(function(req, res, next) {
       if (err) {
         throw err
       }
-      /*res.json(champs);*/
       res.send(champs);
     });
-    //res.send(req.params.championName) leave for now
   });
 
   app.get('/api/champions/', function (req, res) {
@@ -38,9 +32,12 @@ app.use(function(req, res, next) {
       if (err) {
         throw err
       }
-      /*res.json(champs);*/
       res.send(champs);
   });
+});
+
+app.use(function(req, res) {
+  res.sendFile(path.resolve(__dirname + '/../public/index.html'));
 });
 
 var httpServer=app.listen(process.env.PORT, function () {
