@@ -221,6 +221,7 @@ html, body , #root {
   text-align: center;
   background-color: #939393;
   width: 90%;
+  max-width: 1000px;
   min-height:100%;
   margin-bottom: 20px;
   margin-top: 0px;
@@ -249,7 +250,7 @@ html, body , #root {
   display: block;
   margin: 0 auto;
   min-width: 90%;
-  max-width: 90%;
+  max-width: 1000px;
   min-height:100%;
   background-color: burlywood;
   border: 5px solid #cdfafa;
