@@ -38,7 +38,7 @@ export default class DataFetcher extends React.Component {
   }
 
   getData(){
-    fetchJSON('http://localhost:3001/champions/').then((json) => {
+    fetchJSON('http://localhost:3001/api/champions/').then((json) => {
       this.setState({champions:_.values(json.data)})
     })
   }

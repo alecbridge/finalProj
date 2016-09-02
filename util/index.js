@@ -1,12 +1,17 @@
 const horizon = require('@horizon/server'); 
 var path=require('path')
-require('dotenv').config({path: path.resolve('../.env')});
+require('dotenv').config();
 
 var LolApi = require('leagueapi');
 LolApi.init(process.env.SECRET_API_KEY, 'na');
 
 var express = require('express');
 var app = express();
+app.use(express.static(path.resolve(__dirname + '/../public')));
+
+app.get('/', function(req, res) {
+  res.sendFile(path.resolve(__dirname + '/../public/index.html'));
+});
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -14,7 +19,7 @@ app.use(function(req, res, next) {
   next();
 });
 
-  app.get('/champions/:champId', function (req, res){
+  app.get('/api/champions/:champId', function (req, res){
     var options = {champData: 'image,stats,passive,spells', version : '6.16.2', locale: 'en_US', dataById:true}
     LolApi.Static.getChampionById(req.params.champId, options,'na', function (err, champs) {
       if (err) {
@@ -26,7 +31,7 @@ app.use(function(req, res, next) {
     //res.send(req.params.championName) leave for now
   });
 
-  app.get('/champions/', function (req, res) {
+  app.get('/api/champions/', function (req, res) {
     var options = {champData: 'image', version : '6.16.2', locale: 'en_US', dataById:true}
     LolApi.Static.getChampionList(options,'na', function (err, champs) {
       if (err) {
@@ -41,6 +46,15 @@ var httpServer=app.listen(3001, function () {
   console.log('Example app listening on port 3001!');
 });
 
+if(!process.env.RETHINKDB_URL) {
+  throw 'RETHINKDB_URL environment variable must be defined.'
+}
+/*
+Transform: http://myhost.com:28015
+Into:      myhost.com:28015
+*/
+var urlRethinkDB = url.parse(process.env.RETHINKDB_URL);
+
 const horizonOptions = {
   auth: {
     token_secret:"akjbwiubcwenicnregb1390u89hcnqknk4nub9n1oihdbf4x2",
@@ -50,9 +64,9 @@ const horizonOptions = {
   auto_create_collection: true, //TODO: harden, dokku/rethink
   auto_create_index: true, //TODO: harden, dokku/rethink
   permissions: false,
-  project_name:'finalProj',
-  rdb_host: "0.0.0.0",
-  rdb_port: 28015
+  project_name:'champions',
+  rdb_host: urlRethinkDB.hostname,
+  rdb_port: urlRethinkDB.port
 };
 
 console.log('starting horizon with ' + horizonOptions);

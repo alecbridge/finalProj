@@ -13,7 +13,7 @@ export default class Welcome extends React.Component {
       <div className="welcomeBodyStyle">
         <div className="welcomeImage">
           <div className="mainHolder">
-            <span className="welcomeTitle">League Champion Cheatsheet</span>
+            <div className="welcomeTitle">League Champion Cheatsheet</div>
             <div className="buttonPosition"><input type="button" value="Enter" className="buttonStyle" onClick={this.onEnterClick.bind(this)} /></div>
           </div>
         </div>

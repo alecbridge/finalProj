@@ -20,10 +20,8 @@ Right away again with the whole "champion card" feel, at the top like most other
 ##TL;DR
 Took a 12 week long course to learn how to code, this if my final project for it. Slightly interactive user friendly site to learn or remind yourself of the many characters in the game League of Legends cutting out extraneous information.
 
-
 ####Coming Updates/Fixes
 In no particular order:
-
   * Alphabetize Champion List  
   * Add in Search Functionality to List  
   * Move starred items to top of List  
