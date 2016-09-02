@@ -43,8 +43,8 @@ app.use(function(req, res, next) {
   });
 });
 
-var httpServer=app.listen(3001, function () {
-  console.log('Example app listening on port 3001!');
+var httpServer=app.listen(process.env.PORT, function () {
+  console.log('Example app listening on port '+process.env.PORT +"!");
 });
 
 if(!process.env.RETHINKDB_URL) {
