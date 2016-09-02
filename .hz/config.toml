@@ -24,7 +24,7 @@ secure = false
 #                application state
 # 'serve_static' will serve files from the given directory over HTTP/HTTPS
 #------------------------------------------------------------------------------
-project_name = "finalProj"
+project_name = "champions"
 serve_static = "public"
 
 
