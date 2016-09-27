@@ -8,10 +8,9 @@ export default class NoMatch extends React.Component {
         <div className="errorMessage">
           <span>Error: 404 </span>
           <p>Page Not Found</p>
-          <p>Click <Link to='/championlist/'>Here</Link> to Return to Our Champion List</p>
+          <p>Click <Link to='/champions/'>Here</Link> to Return to Our Champion List</p>
         </div>
       </div>
     )
-    /*className="errorLink" */
   }
 }

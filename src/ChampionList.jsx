@@ -45,7 +45,6 @@ export default class ChampionList extends React.Component {
         key:key
       })
     }
-      //console.log(key, e) When clicking star, console logs the name the star belongs to
   }
 
    handleChampClick(id, e){
@@ -79,5 +78,3 @@ export default class ChampionList extends React.Component {
     )
   }
 }
-
-//GOOD, WORKS, FULL SQUARE PICS<div><img src={"http://ddragon.leagueoflegends.com/cdn/6.16.2/img/champion/"+champion.image.full} /></div>  
