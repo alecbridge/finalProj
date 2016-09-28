@@ -225,6 +225,7 @@ html, body , #root {
   min-height:100%;
   margin-bottom: 20px;
   margin-top: 0px;
+  padding-bottom: 25px;
   border: 5px solid #076f9d;
   border-image: linear-gradient(to bottom,#cdfafa,#076f9d) 1 stretch;
   border-top: none;
@@ -249,7 +250,7 @@ html, body , #root {
 .topImageHolder{
   display: block;
   margin: 0 auto;
-  min-width: 90%;
+  width: 90%;
   max-width: 1000px;
   min-height:100%;
   background-color: burlywood;
